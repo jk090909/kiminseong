@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>08-2테두리.html</title>
+  <style>
+    li { 
+      border-style: solid;
+      border-width: 4px;
+      border-color: blue;
+      margin: 10px;
+    }
+    .dotted {
+      border-style: dotted;
+    }
+    .dashed {
+      border-style: dashed;
+    }
+    .groove {
+      border-style: groove;
+      border-width: 10px;
+      border-color: brown;
+    }
+
+    .solid {
+      /* none 보더 없음 */
+      /* 방향 top | bottom | left | right */
+      border-top-style: none;
+    }
+
+    .border1 {
+      border-left-style: none;
+      border-right-style: none;
+
+      border-top-style: dotted;
+      border-bottom-width: 10px;
+      border-bottom-color: red;
+    }
+    .border2 {
+      /* 수직 | 수평 */
+      border-width: thick thin;
+    }
+    body {
+        background: #eee;
+    }
+    blockquote {
+        background: #fff;
+        padding: 20px;
+        border-left: 5px solid green;
+    }
+    h1 {
+        padding: 5px;
+        border-bottom: 3px solid #ccc;
+    }
+    .round1, .round2, .round3 {
+        width: 200px;
+        height: 200px;
+        background: orange;
+        border-radius: 20px;
+    }
+    .round1 {
+        background: url('http://placeimg.com/400/200/animals');
+    }
+    .round2 {
+        border-radius: 20px 100px;
+    }
+    .round3 {
+       border-top-left-radius: 0;
+       border-top-right-radius: 20px;
+       border-bottom-right-radius: 40px;
+       border-bottom-left-radius: 80px;
+    }
+    .circle {
+        background: pink;
+        width: 100px;
+        height: 100px;
+        /* circle_radius = 정사각형 직경의 1/2 */
+        border-radius: 50%;
+
+        /* 그림자 효과 */
+        box-shadow: 2px 2px 4px black;
+    }
+  </style>
+</head>
+<body>
+
+    <h2>border-radius 보더 둥글기 효과</h2>
+    <p class="circle">circle</p>
+    <p class="round1">전체 방향</p>
+    <p class="round2">대칭 방향</p>
+    <p class="round3">방향 별로 각각 따로</p>
+
+    <h2>Important Example</h2>
+    <blockquote>
+        Lorem ipsum dolor sit amet consectetur 
+        adipisicing elit. Dolor eveniet nobis optio 
+        distinctio repudiandae nesciunt est reiciendis? 
+        Ullam accusamus atque sit excepturi, recusandae 
+        dolorem, nobis voluptatem dolorum inventore ipsum 
+        pariatur!
+    </blockquote>
+  <!-- 307p 연습  -->
+
+  
+  <h2>border 속성</h2>
+  <ul>
+    <li class="border2">수직 수평</li>
+    <li class="border1">방향별 보더 스타일</li>
+    <li class="dotted">dotted(점선)</li>
+    <li class="dashed">dashed(긴점선)</li>
+    <li class="solid">solid(실선)</li>
+    <li class="double">double(겹선)</li>
+    <li class="groove">groove(음영선)-액자 효과</li>
+  </ul>
+  <h1>박스 모델</h1>
+  <p>Lorem ipsum dolor sit amet consectetur 
+      adipisicing elit. Quaerat quibusdam, 
+      temporibus velit alias saepe placeat 
+      laborum repellat ex sint harum! Saepe 
+      ducimus blanditiis ab quam necessitatibus. 
+      Unde recusandae doloremque eum!</p>
+</body>
+</html>

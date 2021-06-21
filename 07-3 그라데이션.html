@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>class.html</title>
+    <meta charset="UFT-8">
+    <style>
+        .l-gra1, .l-gra2 {
+            height: 100px;
+            background: #fff;
+            /* 색상만 지정 (180도 방향이 기본) */
+            background: linear-gradient(yellow, blue);
+        }
+        .l-gra2 {
+            /* 각도(deg) */
+            background: linear-gradient(to right, yellow, red);
+            background: linear-gradient(90deg, yellow, red);
+
+            background: linear-gradient(to top left, yellow, red);
+        }
+        .x {
+            height: 100px;
+            background: linear-gradient(to right bottom, blue, white);
+        }
+        .l-gra3 {
+            height: 100px;
+            background: #e7ff32;
+            background: linear-gradient(to right, #fce832 30%,#ff290c 80%);
+        }
+        .r-gra1 {
+            width: 400px; height: 200px;
+            background: #ccc;
+            background: radial-gradient(white, yellow, red);
+        }
+        .r-gra2 {
+            width: 400px; height: 200px;
+            background: #ccc;
+            background: radial-gradient(circle, white, yellow, red);
+        }
+        .rd {
+            width: 400px; height: 300px;
+            background: red;
+            background: radial-gradient(white 5%, blue 20%, yellow 60%, skyblue 100%);
+        }
+    </style>
+</head>
+<body>
+    <h2>radial-gradient 원형 그라디언트</h2>
+    <p class="r-gra1">radial-gradient</p>
+    <p class="r-gra2">radial-gradient</p>
+    <h2>linear-gradient 선형그라디언트</h2>
+    <p class="l-gra1">linear-gradient</p>
+    <p class="l-gra2">linear-gradient</p>
+    <p class="x">ddd</p>
+    <p class="l-gra3">color stop location</p>
+    <p class="rd">dsd</p>
+</body>
+</html>

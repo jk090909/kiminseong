@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>12-2속성선택자.html</title>
+  <style>
+    /* 'href' 속성이 있는 a요소를 선택 */
+    a[href] {
+      background: yellow;
+    }
+
+    a[target] {
+      border: 2px solid red;
+    }
+
+    /* [속성 = "값"] 속성값이 일치 */
+    a[href="http://www.naver.com"] {
+      color: green;
+    }
+
+    /* [속성 ~= "값"] 특정 문자 값이 포함 */
+    a[class ~= "button"] {
+      background: pink;
+    }
+
+    /* [속성 ^= "값"] 특정 문자로 시작(앞) */
+    a[href ^= "http://"] {
+      font-weight: bold;
+      font-size: 2em;
+    }
+
+    /* [속성 $= "값"] 특정 문자 마지막 비교($=) */
+    a[href $= "hwp"] {
+      display: block;
+      width: 100px; height: 100px;
+      background: url(https://4.bp.blogspot.com/-pgDyhAvqWfs/VSvhDLqp48I/AAAAAAAAAig/5IANNHCR_4U/s320/hancomHWPdocumentlogo.png);
+      background-size: cover;
+    }
+
+    a[href $= "pdf"] {
+      display: block;
+      width: 100px; height: 100px;
+      background: url(https://www.valterlongo.com/wp-content/uploads/2019/08/pdf-icon.png);
+      background-size: cover;
+    }
+    /* [속성 *= "값"] 특정 문자가 일부 포함되어 있음 */
+    a[href *= "google"] {
+        background: blue;
+        color: white;
+    }
+  </style>
+</head>
+<body>
+  <h2>속성선택자(Attribute Selector)</h2>
+  <ul>
+    <li><a href="world.hwp">world.hwp</a></li>
+    <li><a href="hello.hwp">hello.hwp</a></li>
+    <li><a href="hello.pdf">hello.pdf</a></li>
+    <li><a href="#" target="_blank">menu 1</a></li>
+    <li><a href="#" target="_self">menu 2</a></li>
+    <li><a href="http://www.naver.com">NAVER</a></li>
+    <li><a href="http://www.google.com">google</a></li>
+    <li><a href="#" class="flat button">menu 4</a></li>
+    
+  </ul>
+</body>
+</html>

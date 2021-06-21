@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>class.html</title>
+    <meta charset="UFT-8">
+    <style>
+        ul {
+            list-style-type: none;
+        }
+    </style>
+</head>
+<body>
+    <label for = "">수량:</label>
+
+    <!---
+    value : 초기값
+    min : 최소값
+    max : 최대값
+    step : 단계
+    ---->
+    <input 
+    type = "number" 
+    value="1"
+    min="1"
+    max="10">
+
+    <h2>range - 슬라이드 막대</h2>
+    <input type="range" min="0" max="200" value="100" step="33.3">
+
+    <fieldset>
+        <legend>등록정보</legend>
+        <ul>
+            <li>
+                <label for="member">참여인원<small>(최대10명)</small></label>
+                <input type="number" id ="member" value ="1" min="0" max="10" step="1">
+            </li>
+            <li>
+                <label for ="stuff">지원물품<small>(1인당 5개)</small></label>
+                <input type="number" id="stuff" value="1" min="0" max="50" step="5">
+            </li>
+            <li>
+                <label for ="sta">희망단계<small>(하, 중, 상, 최상)</small></label>
+                <input type="range" id="sta" value="1" min="1" max="4">
+            </li>
+        </ul>
+    </fieldset>
+
+    <fieldset>
+        <legend>신청 과목</legend>
+           <p>이 달에 신청할 과목을 선택하세요(1과목만 가능)</p>
+           <label><input type="radio" name="subject" value="speaking">회화</label>
+           <label><input type="radio" name="subject" value="grammer">문화</label>
+           <label><input type="radio" name="subject" value="writing">작문</label>
+    </fieldset>
+    <fieldset>
+        <label>메일링</label>
+        <p>메일로 받고 싶은 뉴스 주제를 선택해 주세요(복수 선택 가능)</p>
+        <label><input type="checkbox" name="mailing1" value="news">해외 단신</label>
+        <label><input type="checkbox" name="mailing2" value="dialog">5분 회화</label>
+        <label><input type="checkbox" name="mailing3" value="pops">모닝 팝스</label>
+    </fieldset>
+
+    <h2>color</h2>
+    <input type="color" value="#ff0000">
+
+    <h2>예약 날짜를 입력해 주세요</h2>
+    <label for="">시작일</label>
+    <input type="date">
+    <label for="">종료일</label>
+    <input type="date">
+
+    <h2>submit과 reset(입력 초기화)</h2>
+    <form action="">
+        <label for="">이름</label>
+        <input type="text" size="26"><br>
+        <label for="">주민번호</label>
+        <input type="text" name="" size="6" maxlength="6"> -
+        <input type="text" name="" size="7" maxlength="7"><br>
+        <input type="submit">
+        <input type="reset" value="다시입력">
+        <button type="submit">전송</button><br> <!--버튼 태그는 스타일안에 서브밋 리셋을 추가할수있다-->
+        <button onclick="alerk('클릭 완료!');">클릭</button>
+
+        <h2>파일 첨부하기</h2>
+        <label for="">파일첨부:
+            <input type="file">
+        </label>
+    </form>
+</body>
+</html>

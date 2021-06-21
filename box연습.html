@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>class.html</title>
+    <meta charset="UFT-8">
+    <style>
+        .box {
+            background: orange;
+            width: 200px;
+            height: 200px;
+            float: left;
+        }
+        .green {
+            background: greenyellow;
+            padding: 20px;
+            border: 10px solid red;
+            /* box-sizing: border-box: 여백과 보더를 늘리지 않음 */
+            box-sizing: border-box;
+            float: left;
+        }
+        .box3 {
+           background: blue;
+           width: 200px;
+           height: 200px;
+           clear: both;
+           width: 400px;
+           border: 10px dotted black;
+           box-sizing: border-box;
+        } 
+    </style>
+</head>
+<body>
+    <div class="box green">box 1</div>
+    <div class="box">box 2</div>
+    <div class="box3">box 3</div>
+</body>
+</html>

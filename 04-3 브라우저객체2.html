@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>class.html</title>
+    <meta charset="UFT-8">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <h2>setTimeout() 일정 시간이 지나면 실행 후 종료</h2>
+
+    <script>
+        /*
+        var to = setTimeout(function(){
+            document.write('<hr>5초가 경과했습니다.');
+        }, 5000); 
+        */
+        // 모니터 크기 정보 구하기
+        var width = screen.width;
+        document.write('모니터 가로 크기: ', width);
+
+        // 모니터 컬러 정보
+        var colorDepth = screen.colorDepth;
+        document.write('<br>모니터 컬러 정보: ', colorDepth);
+
+        // 디바이스 정보
+        document.write('<br>브라우저 코드: ', navigator.appCodeName);
+        document.write('<br>브라우저 명: ', navigator.appName);
+        document.write('<br>브라우저 엔진: ', navigator.product);
+        document.write('<br>OS: ', navigator.platform);
+        document.write('<br>디바이스 정보: ', navigator.userAgent);
+    </script>
+
+    <h2>디바이스 정보 검사하기</h2>
+    <script>
+        var info = navigator.userAgent.toLowerCase();
+        var osImg = null; // 변수를 초기화(비워두겠다)
+        console.log(info);
+    </script>
+
+    <script>
+        var phoneNum ="010-2345-1234";
+        var result_1 = phoneNum.substring(0,phoneNum.length-4);
+        document.write(result_1,"****<br>");
+
+        var imgSrc = 'image/bnt_out.jpg';
+        result = imgSrc.replace('bnt_out.jpg', 'bnt_over.jpg');
+        document.write(result,'<br>');
+    </script>
+
+    <script>
+        var menu = ['짜장면', '돈까스', '된장국', '김치찌개','회덮밥'];
+        var menuNum = Math.floor(Math.random()*5);
+        document.write(menuNum,'<br>');
+    </script>
+</body>
+</html>

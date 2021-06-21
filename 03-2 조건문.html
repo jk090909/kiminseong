@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>class.html</title>
+    <meta charset="UFT-8">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <script>
+        // 참일 때 실행
+        if(true) {
+            document.write('참일때 실행합니다1.')
+        }
+
+        if(false) {
+            document.write('참일때 실행합니다2.')
+        }
+
+        var a = 10;
+        if(a == 10) {
+            document.write('<br>a는 10과 같습니다.')
+        }
+
+        // false의 값 : null, 0
+        if(0) {
+            document.write('조건문에서 값이 0이면...');
+        } // 실행 안됨
+
+        // true의 값 : 1(값이 있으면 됨), 문자 등
+        if(1) {
+            document.write('<br>참의 값들...');
+        }
+    </script>
+
+    <script>
+        var walkAmount =// prompt("당신의 하루 걷는 양은 몇 보인가요?");
+
+        if(walkAmount >= 10000) {
+            document.write("<br>","매우 좋은 습관을 지니고 계시는군요!","<br>");
+        }
+        document.write("end");
+    </script>
+
+    <script>
+        var min =// prompt("당신의 하루 통화량은 몇 분인가요?");
+        if(min >= 60) {
+           document.write("많이 사용하는 편이네요.","<br>");
+        }
+        </script>
+        <script>
+        var username = // prompt("방문자의 이름은?");
+
+        if(username) {
+            document.write("<br>" + username + "님 반갑습니다.");
+        }
+    </script>
+
+    <script>
+        /*
+        var hour = 20;
+        if(hour < 18) {
+            greeting = "Good day";
+        } else {
+            greeting = "Good evening";
+        }
+        document.write("<br>" + greeting);
+
+        var result = confirm('정말로 회원을 탈퇴하시겠습니까?');
+
+        if(result) {
+            document.write('<br>' + '탈퇴')
+        }
+        else {
+            document.write('<br>' + '탈퇴 취소됨');
+        } */
+
+        /* 2가지 이상의 조건 if ~ else if ~ else */
+        var time = 23;
+        if(time < 10) {
+            greeting = "좋은 아침";
+        } else if(time < 20) {
+            greeting = "안녕하세요.";
+        } else {
+            greeting = "좋은 밤 되세요.";
+        }
+
+        document.write('<hr>' + greeting);
+
+        // 계절 확인하기 : 4가지의 조건(범위)
+        var mon = 11;
+        if(mon >= 9 && mon <= 11) {
+            // 9 ~ 11
+            document.write('<hr>가을입니다.');
+        } else if(mon >= 6 && mon <= 8) {
+            // 6 ~8
+            document.write('<hr>여름입니다.');
+        } else if(mon >= 3 && mon <= 5) {
+            // 6 ~8
+            document.write('<hr>봄입니다.');
+        } else {
+            // 기타 (겨울)
+            document.write('<hr>겨울입니다.');
+        } 
+
+        // 아이디, 비번 확인 절차(중첩 if)
+        var id = 'jk090909';
+        var pw = 'jk9460163';
+
+        var user_id = prompt('아이디를 입력하십시오');
+        var user_pw = prompt('비밀번호를 입력하십시오');
+
+        // id 일치여부 판정
+        if(id == user_id) {
+            // 비밀번호 일치 판정
+            if(pw == user_pw) {
+            document.write('<hr>' + id + '님 환영합니다.');
+        } 
+        else {
+            // 비번 틀림
+            alert('정보가 일치하지 않습니다.');
+            location.reload();
+        } 
+    }else {
+           // id 불일치
+           alert('아이디가 틀렸습니다.');
+           location.reload();
+        }
+    </script>
+
+</body>
+</html>

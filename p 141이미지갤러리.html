@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>class.html</title>
+    <meta charset="UFT-8">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div id="galleryZone">
+        <p>
+            <img src="./images/pic_1.jpg" id="photo" alt="" width="400">
+        </p>
+
+        <p>
+            <button onclick="gallery(0)">이전</button>
+            <button onclick="gallery(1)">다음</button>
+        </p>
+    </div>
+
+    <script>
+        var num = 1; // 이미지 번호
+        function gallery(direct) {
+            if(direct) {
+                if(num == 8) return; // 종료 
+                num++;
+            } else {
+                if(num == 1) return;
+                num--;
+            }
+
+            var imgTag = document.getElementById('photo');
+            imgTag.setAttribute("src", "images/pic_" + num + ".jpg");11
+            console.log(num);
+        }
+    </script>
+</body>
+</html>

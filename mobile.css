@@ -1,0 +1,30 @@
+/* PC CSS */
+* {
+    margin: 0;
+}
+
+body {
+    background: orange;
+}
+
+header {
+    width: 100%;
+    background: #ccc;
+}
+
+section {
+    width: 100%;
+    background: #999;
+    color: #fff;
+}
+
+section > article {
+    width: 50%;
+    height: 400px;
+    float: left;
+    background: #abc;
+}
+
+section > article:first-child {
+    background: pink;
+}

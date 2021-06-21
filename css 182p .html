@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>class.html</title>
+    <meta charset="UFT-8">
+    <style>
+        ul {
+            list-style-type: none;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <ul>
+            <li>
+                <label for ="name">이름</label>
+                <input type="text" id ="name">
+            </li>
+            <li>
+                <label for ="phone">휴대폰</label>
+                <input type="text" id="phone">
+            </li>
+            <li>
+                <input type="submit" value="예약하기">
+            </li>
+        </ul>
+    </form>
+
+    <form>
+        <label for="inform">개인정보</label>
+        <ul>
+            <li>
+                <label for ="name">이름</label>
+                <input type ="text" id ="name"
+                placeholder="공백없이 입력하세요.">
+            </li>
+            <li>
+                <label for="tel">연락처</label>
+                <input type="text" id="tel">
+            </li>
+        </ul>
+        <label for="gg">지원 분야</label>
+        <ul>
+            <li>
+                <input type="radio">
+                <label for="">웹 퍼블리싱</label>
+            </li>
+            <li>
+                <input type="radio">
+                <label for="">웹 애플리케이션 개발</label>
+            </li>
+        </ul>
+        <label for="">지원 동기</label><br>
+        <textarea
+        name="memo"
+        id="memo"
+        cols="60"
+        rows="5"
+        placeholder="본사 지원 동기를 간략히 써 주세요">
+    </textarea>
+    </form>
+    <input type="submit" value="접수하기">
+    <input type="reset" value="다시쓰기">
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>class.html</title>
+    <meta charset="UFT-8">
+    <style>
+        body {
+            font-size: 20px;
+        }
+         .left {
+             text-align: left;
+         }
+         .center {
+             text-align: center;
+         }
+         .right {
+             text-align: right;
+         }
+         .justify1 .justify2 {
+             text-align: justify;
+         }
+         .indent1 {
+             background-color: pink;
+             text-indent: 10px;
+             text-indent: 1em;
+         }
+         .indent2 {
+             background-color: lightblue;
+             text-indent: -1em;
+             text-align: center;
+         }
+         .height {
+             line-height: 1em;
+             line-height: 16px;
+             line-height: 2em;
+         }
+         .content {
+             background-color: lightgreen;
+             width: 300px;
+             white-space: nowrap; /* 줄내림 안함 */
+             overflow: hidden; /* 넘치는 부분 숨김 */
+             text-overflow: ellipsis; /* 요약 */
+         }
+         .eee {
+             font-size: 20px;
+             text-align: center;
+             line-height: 30px;
+         }
+    </style>
+</head>
+<body>
+<!----241p 1분 복습----->
+    <p class="eee">웹 문서에서 가장 많이 사용하는 요소인 텍스트는
+       문단 형태로 많이 쓰이므로 텍스트 정렬이나 들여
+       쓰기,줄 간격처럼 문단에 영향을 주는 스타일들이
+       많이 사용됩니다.</p>
+
+
+
+    <h2>text-overflow 글자넘침 중략처리</h2>
+    <p class="content">명동 네이처리퍼블릭 공시가격 3.8%
+        오르는데 보유세는 26.8%</p>
+
+    <h2>line-height 행간(줄간격)</h2>
+    <p class="height">Lorem ipsum dolor sit amet
+         consectetur adipisicing elit. Aperiam sunt 
+         voluptate officia assumenda adipisci tempore 
+         praesentium, autem voluptatibus saepe quisquam 
+         quasi ut minima cumque beatae, ea doloribus, 
+         ducimus quae sit?</p>
+
+    <hr>
+
+    <h2>text-align 들여쓰기(내어쓰기)</h2>
+    <p class="indent1">들여쓰기</p>
+    <p class="indent2">내어쓰기</p>
+
+    <hr>
+
+    <h2>text-align 문단정렬</h2>
+    <p class="left">left 왼쪽정렬(기본)</p>
+    <p class="center">center 중앙정렬</p>
+    <p class="right">right 우측정렬</p>
+    <p class="justify1">산야에 오아이스도 얼음 시들어
+        두기 영락과 인간의 거친 꾸며 운다. 광야에서
+        거친 붙잡아 가슴에 있는 이상 위하여,그들의 것이다. 
+        자신과 웅대한 기관과 있으랴? 든 것이다. 보라, 천자만홍이
+        이것이다. 오직 그들의 많이 이것이다.인생에 이것은 많이 있는가?
+        하는 풀이 동력은 남는 이상은 수 창공에 철환하였는가? 
+        것이다.보라, 오직 실로 보라.이상은 앞이 그들은 교향악이다.
+        안고, 소리다.이것은 같이 이것이다. 같은 찾아 이것은 
+        그와 청춘의 끝까지 청춘을 뿐이다.</p>
+    <p class="justify2">justify 양쪽정렬 Lorem ipsum,
+        dolor sit amet consectetur adipisicing elit.
+        Aspernatur fugit sunt sed ipsam, veritatis
+        aperiam natus incidunt porro optio dolorum 
+        perspiciatis harum omnis voluptate voluptas 
+        repellendus dignissimos pariatur ab quia?</p>
+</body>
+</html>

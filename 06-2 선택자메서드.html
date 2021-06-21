@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>class.html</title>
+    <meta charset="UFT-8">
+    <style>
+        
+    </style>
+    <script src="./jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <h2>전체 형제 prevAll()/next/All()</h2>
+    <ul id="list">
+        <li>first</li>
+        <li>second</li>
+        <li class="third">third</li>
+        <li>fourth</li>
+        <li>fifth</li>
+        <li>sixth</li>
+    </ul>
+    <script>
+        $(function(){
+          $('.third').prevAll().css('color', 'red');
+          $('.third').nextAll().css('border', '1px solid green');
+
+         // 전체 형제 siblings() 선택자를 제외한 나머지
+         $('.third')
+         .siblings()
+         .css('background-color', 'pink');
+
+        });
+    </script>
+
+ <h2>부모(상위)요소 선택자 메서드</h2>
+ <div class="parant">
+     <h1>heading 1</h1>
+     <p>문단 1</p>
+     <div class="child">
+         <p class="p">후손 문단</p>
+     </div>
+ </div>
+
+ <script>
+     $(function(){
+       $('.p').parent().css('border', '1px dotted red');
+     });
+ </script>
+
+ <h2>closest() 가장 가까운 상위 요소 선택</h2>
+<div>
+     <div>
+         <p class="txt1">내용</p>
+     </div>
+</div>
+<script>
+    $(function(){
+      $('.txt1')
+      .closest('div')
+      .css('border', '1px solid blue');
+    });
+</script>
+
+</body>
+</html>

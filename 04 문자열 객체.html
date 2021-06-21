@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>class.html</title>
+    <meta charset="UFT-8">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <h2>문자열 객체</h2>
+
+    <script>
+        let txt = 'hello world'
+        document.write('<br>txt 문자 개수 = ', txt.length);
+
+        // charAt(인덱스번호) 해당 index의 문자
+        document.write('<br>charAt(4) = ', txt.charAt(4)); // 알파벳 O
+
+        // indexOf('문자') index값을 변환 // world가 속한 인덱스열을 알려줌
+        document.write('<br>indexOf() = ', txt.indexOf('world'));
+        
+        // macth('문자') 해당 문자와 일치하는 문자를 반환 
+        document.write('<br>match() = ', txt.match('hello'));
+        document.write('<br>match() = ', txt.match('apple'));
+
+        // replace(바꿀문자, 새문자)변경
+        document.write('<hr>replace() = ', txt.replace('hello', 'love'));
+
+        // substr(시작인덱스, 개수) - 문자열 가져오기
+        document.write('<br>txt 배열 = ',txt);
+        document.write('<br>substr() = ', txt.substr(6, 3));
+
+        // toLowCase() 소문자로 변환
+        let str = 'JAVASCRIPT BASIC';
+        document.write('<br>toLowerCase() = ', str.toLowerCase());
+
+        // split() 문자열의 특정문자를 기준으로 배열로 변환
+        var str2arr = str.split(' '); // 공백을 기준으로 배열로 변환
+
+    </script>
+
+    <script>
+          /*
+    var userName = prompt('당신의 영문 이름은?');
+    var upperName = userName.toLocaleUpperCase();
+    document.write('<hr>당신의 이름은 ', upperName);
+    */
+
+    /*
+    var userNum = prompt('당신의 연락처는?', "");
+    var result = userNum.substring(0, userNum.length - 4);
+    document.write('<hr>전화번호는 ', result + '****');
+    */
+
+    /* 이메일 유효성 검사 */
+    var userEmail = prompt("이메일 주소 입력", "");
+    var arrUrl = [".co.kr", ".com", ".net", ".or.kr", "go.kr"];
+
+    var check1 = false;
+    var check2 = false;
+
+    // '@' 포함되어 있는지 검사
+    if(userEmail.indexOf("@") > 0) {
+      check1 = true;
+      // url 이 포함되어 있는지 검사
+      for(var i = 0; i < arrUrl.length; i++) {
+        if(userEmail.indexOf(arrUrl[i]) > 0) {
+          check2 = true;
+        }
+      }
+    }  
+    console.log(userEmail.indexOf("@"), userEmail.indexOf(arrUrl[i]));
+
+    console.log(check1, ', ', check2);
+    // 모두 포함되어 있으면(&&둘다 참이면)
+    if(check1 && check2) {
+      document.write('<hr>이메일 주소: ', userEmail);
+    } else {
+      alert('이메일 형식이 잘못됬습니다.');
+    }
+    </script>
+</body>
+</html>

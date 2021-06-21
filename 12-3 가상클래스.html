@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>class.html</title>
+    <meta charset="UFT-8">
+    <style>
+        a {text-decoration: none;
+        }
+
+        /* :link 아직 방문하지 않은 상태 */
+        #menu li a:link {
+           color: black;
+        }
+
+        /* :visited 방문한 상태 */
+        #menu li a:visited {
+            color: cadetblue;
+        }
+
+        /* :hover 마우스가 올라갔을 때 */
+        #menu li a:hover {
+            color: orange;
+            text-decoration: underline;
+        }
+
+        /* :active 마우스로 클릭(터치)할때 */
+        #menu li a:active {
+            color: red;
+        }
+        /* 네비들 사이의 간격을 넓히고 싶은데 잘 안됩니다 ㅠ */
+        .navi a:link {
+            font-size: 14px;
+            padding: 10px;
+            margin: 5px 0 5px 0;
+            background: #ccc;
+            display: inline-block;
+        }
+        .navi a:hover {
+            background-color: yellow;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h2>링크 관련 가상 클래스</h2>
+    <ul id="menu">
+        <li><a href="menu 1">menu 1</a></li>
+        <li><a href="menu 2">menu 2</a></li>
+    </ul>
+    <nav class="navi">
+        <ul>
+            <li><a href="#">이용 안내</a></li>
+            <li><a href="#">객실 소개</a></li>
+            <li><a href="#">예약 방법 및 요금</a></li>
+            <li><a href="#">예약하기</a></li>
+        </ul>
+    </nav>
+
+</body>
+</html>

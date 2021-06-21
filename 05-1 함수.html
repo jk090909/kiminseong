@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>class.html</title>
+    <meta charset="UFT-8">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <Script>
+        // 함수 선언
+        function testFnc() {
+            document.write('<hr>함수가 실행됨');
+        }
+
+        // 함수 호출(실행)
+        testFnc();
+
+        // 익명함수를 변수에 대입
+        var testFnc2 = function() {
+            document.write('<hr>익명함수가 실행됨','<br>');
+        }
+
+        // 함수 호출(변수명)
+        testFnc2();
+    </Script>
+
+    <script>
+        var count = 0;
+
+        function myFnc() {
+            count++;
+            document.write('hello' + count, "<br>");
+        }
+        myFnc();
+        myFnc();
+        myFnc();
+        myFnc();
+        myFnc();
+    </script>
+
+    <h2>배경색 바꾸기 함수</h2>
+    <script>
+        // 색상 배열
+        let color = ['white', 'yellow', 'aqua', 'purple'];
+        var i = 0; // 배열 카운트 변수
+
+        // 함수 선언
+        function changeColor() {
+            i++;
+            if(i >= color.length) {
+                i = 0;
+            }
+            // 배경색을 배열에 있는 색상으로 변경
+            var bodyTag = document.body;
+            bodyTag.style.backgroundColor = color[i];
+        }
+    </script>
+    <button onclick="changeColor();">배경색 바꾸기</button>
+
+    <h2>함수의 매개변수</h2>
+    <script>
+        function getInfo(name, area) {
+          document.write('<br>'+name+'의 사는 곳은 '+area+'입니다.');
+        }
+
+        // 함수(이름, 지역명)
+        getInfo('홍길동', '서울');
+        getInfo('고길동', '부산');
+
+        function addNum(a, b) {
+            document.write('<br>', '두 수의 합은 = ', a + b);
+        }
+
+        addNum(4, 6);
+        addNum(5, 34);
+
+        function Num(a, b) {
+            document.write('<br>','두 수의 곱은 = ',a*b);
+        }
+
+        Num(4, 72);
+    </script>
+
+    <h2>아이디 비번 확인 함수</h2>
+    <script>
+        // 사용자 정보
+        var rightId = 'korea';
+        var rightPw = '1234';
+
+        // 함수 선언(아이디, 비번)
+        /*
+        function login(id, pw) {
+          if(id==rightId) {
+              if(pw==rightPw) {
+                document.write('인성님 방문을 환영합니다.');
+              } else {
+                  alert('잘못된 비밀번호 입니다.');
+              }
+            }
+        }
+        var userid = prompt('아이디 입력', '');
+        var userpw = prompt('패스워드 입력', '');
+        login(userid, userpw);
+        */
+    </script>
+
+    <h2>함수의 return</h2>
+    <script>
+        // 함수는 실행 후 소멸됨
+        function myAdd(a, b) {
+            var result = a + b;
+            return result; // 결과값을 반환
+        }
+
+        var res = myAdd(1, 2); // 함수의 값을 res에 대입
+        document.write('<br>result = ', res);
+        </script>
+
+</body>
+</html>

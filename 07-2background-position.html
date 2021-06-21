@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>class.html</title>
+    <meta charset="UFT-8">
+    <style>
+        .bg1 {
+            width: 800px;
+            height: 400px;
+            background: #ccc;
+            background-image: url('./images/bg3.jpg');
+            /* 배경 반복 해제 */
+            background-repeat: no-repeat;
+            /* 배경 위치 조절 */
+            background-position: center;
+            background-position: 200px 100px;
+            background-position: 50% 30%
+        }
+        #btn1 {
+            width: 120px;
+            height: 40px;
+            font-size: 14px;
+            background-color: cadetblue;
+            background-image: url('./images/light.png');
+            background-repeat: no-repeat;
+            background-size: 24px;
+            background-position: 4PX, 50%;
+        }
+        .bg2 {
+            width: 600px; height: 400px;
+            background: pink;
+            border: 10px solid gray;
+            padding: 20px;
+            background-image: url('./images/bg3.jpg');
+            background-repeat: no-repeat;
+
+            /* 여백을 뺀 콘텐츠 부분부터 시작*/
+            background-origin: content-box;
+        }
+    </style>
+</head>
+<body>
+    <p class="bg1">
+        background-position
+    </p>
+
+    <button id="btn1">BUTTON</button>
+    <P class="bg2">
+        background-origin 배경이미지 배치 기준
+    </P>
+</body>
+</html>

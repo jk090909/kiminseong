@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>class.html</title>
+    <meta charset="UTF-8">
+  <script src="jquery-3.5.1.min.js"></script>
+  <style>
+      .box {
+          width: 200px; height: 200px;
+         border: 2px solid #ccc;
+      }
+      .red {
+          background: rgb(207, 84, 84);
+      }
+      .blue {
+          background: rgb(75, 75, 207);
+      }
+  </style>
+</head>
+<body>
+    <h1 class="heading">
+        <span>문서객체(DOM)조작</span>
+    </h1>
+    <h2>html() / text() 메소드</h2>
+    <p class="p1"><strong>p1</strong></p>
+    <p class="p2">p2</p>
+
+    <script>
+        $('.p2').html('<em>텍스트</em>');
+    </script>
+
+    <h2>html() 연습</h2>
+    <h3 id="title3">여기를 text() 메서드로 변경해 보세요.</h3>
+    <h3 id="title4">여기를 html() 메서드로 변경해 보세요.</h3>
+    <script>
+        $(function(){
+            let str_text = "Hello Title";
+            let str = "<em>Hello HTHML</em>";
+            // title3에 str_text 추가
+            $('#title3').text(str_text);
+
+            // title4에 str_html 추가
+            $('#title4').html(str);
+        });
+    </script>
+
+    <section id="img">
+        <img src="http://placehold.it/150x100/f80" alt="img1">
+    </section>
+    
+    <script>
+        $(function(){
+            // 읽기 : attr(속성명)
+            // src의 속성값을 읽기
+            var src = $('#img img').attr('src');
+            console.log('src = ', src);
+
+            // img의 alt 속성값을 읽기
+            var a = $('#img img').attr('alt');
+            console.log('a = ', a);
+        })
+    </script>
+
+    <h2>addClass() / removeClass() 클래스 추가/제거</h2>
+    <p class="box">
+        box
+    </p>
+    <button onclick="setBG('blue');">addClass</button>
+    <button onclick="removeBG();">removeClass</button>
+    <button onclick="toggleBG();">toggleClass</button>
+    <script>
+        function setBG(color) {
+        $('.box').addClass(color);
+        }
+
+        // removeClass()로 배경지우기
+        function removeBG() {
+        $('.box').removeClass('blue');
+        }
+
+        // toggleClass('클래스명')
+        function toggleBG() {
+            $('.box').toggleClass('blue');
+        }
+    </script>
+</body>
+</html>

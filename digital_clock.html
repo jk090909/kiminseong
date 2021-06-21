@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>class.html</title>
+    <meta charset="UFT-8">
+    <style>
+        @font-face {
+            font-family:
+            src: url():
+        }
+
+        #clock {
+            font-family: ds-digib;
+            background: #999;
+            width: 240px;
+            font-size: 60px;
+            text-align: center;
+            border: 10px solid #333;
+        }
+    </style>
+</head>
+<body>
+    <!--1. Data 객체로 시간을 구함
+        2. setInterval() 매서드로 인터벌 프로그램 실행
+        --->
+     <div id="clock"></div>
+        <script>
+
+            let clock = setInterval(function() {
+                // 시간값 구하기
+                let d = new Date();
+                let hour = d.getHours();
+                let min = d.getMinutes();
+                let sec = d.getSeconds();
+
+                // #clock 요소에 시간 정보 출력
+                let clock = document.getElementById('clock');
+                clock.innerHTML = hour + ':' + min + ':' + sec;
+            }, 1000);
+        </script>
+</body>
+</html>

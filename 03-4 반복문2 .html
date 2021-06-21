@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>class.html</title>
+    <meta charset="UFT-8">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <script>
+        for(var i = 1; i <=10; i++) {
+            if(i == 6) break;
+            document.write(i, "<br>");
+        }
+// 1 ~ 10의 범위에서 홀수 출력
+        for(var i = 1; i <= 10; i++) {
+            if(i % 2 == 0) continue;
+            document.write(i, '<br>');      
+          }
+ // 1 ~ 20의 범위에서 짝수만 출력하기
+          for(var i = 1; i <= 20; i++) {
+              //홀수만 출력하고 (건너뜀 continue)
+              if(i % 2 == 1) continue;
+              document.write(i,'<br>')
+          }
+    </script>
+</body>
+</html>

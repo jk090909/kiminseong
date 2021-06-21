@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02-2변수.html</title>
+</head>
+<body>
+    <h1>변수(var) - Variable Value</h1>
+    <script>
+        var x;   // x 변수 선언
+        var age = 20;   // age 변수를 선언하여 20 값을 대입
+
+        /* 프로그램의 목적
+            1.값을 입력
+            2.값을 처리
+            3.값을 출력
+        */
+
+        // 변수값을 출력
+        document.write(x);  // undefined(값이 미정의)
+        document.write('<br>');
+        document.write(age);    //  20
+
+        // 나이 한살 추가
+        age = 20 + 1;
+        document.write('<br>' + age);
+    </script>
+
+    <h2>자료형(Data Type)</h2>
+    <script>
+        // 숫자 + 숫자 = 숫자
+        var num = 10;  // 숫자형(number)
+        document.write(num + num); // 20
+        
+        //  문자 + 문자 = 문자
+        var str = "hello"; // 문자형(string)
+        document.write('<br>' + str + str);
+
+        // 숫자 + 문자 = 문자
+        document.write('<br>' + num + str);
+
+        // 다음 x의 자료형은?
+        var x = "20";  // "문자"
+        document.write('<br>');
+        document.write(x + x);
+
+        // Number(값) - 문자형을 숫자로 변환
+        var x = Number(x);
+        document.write('<br>x = ');
+        document.write(x + x);
+    </script>
+
+    <h2>논리형</h2>
+    <script>
+        var s = true; // true(참)
+        s = false; // 거짓
+        document.write('s = ', s);
+
+        // 논리값(true, false) 을 출력
+        var q = 3 < 1; // 비교값을 q 변수에 대입
+        document.write('<br>' + q);
+
+        // Boolean(값) - 참, 거짓 여부
+        var k = Boolean(100); // 숫자 true
+        k = Boolean("hello"); // 문자 true
+        k = Boolean(0); // 0 false
+        k = Boolean(null); // 빈값
+        k = Boolean(undefined); // 미정의
+    
+        document.write('<br>k = ' + k);
+
+    </script>
+    <h2>자료형 확인</h2>
+    <script>
+        // typeof 변수의 자료형 확인
+        var my_num = 9;
+        document.write("<br>my_num = " + typeof my_num);
+
+        var my_str = "hello";
+        document.write("<br>my_str = " + typeof my_str);
+    </script>
+</body>
+</html>

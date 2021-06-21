@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>class.html</title>
+    <meta charset="UFT-8">
+    <meta name="Viewport" content="width=deviec-width,
+    initial-scale=1.0">
+    <style>
+* {
+    margin: 0;
+}
+
+body {
+  font-size: 20px;
+}
+
+.container {
+      /* 최대 가변폭 */
+      max-width: 1200px;
+
+      /* 최소 가변폭 */
+      min-width: 400px;
+      outline: 1px solid red;
+      margin: 0 auto;
+      text-align: left;
+    }
+    header {
+      background: #ccc;
+      height: 120px;
+    }
+
+    .content {
+      width: 62.5%;
+      /* width: 600px; */
+      /* background: #abc; */
+      float: left;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .content p {
+      /* 최상위 요소가 기준 */
+      font-size: 1rem;
+    }
+    
+    .right-side {
+      width: 37.5%;
+      /* width: 360px; */
+      height: auto;
+      background: #cba;
+      float: right;
+      font-size: 1em;
+    }
+
+    footer {
+      height: 100px;
+      background: #ccc;
+      clear: both;
+    }
+
+.container .right-side > img {
+    width: 100%;
+}
+</style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>가변 레이아웃</h1>
+    </header>
+    <section class="content">
+        <h1>content(본문)</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos ex aliquid doloribus quaerat, consequuntur libero, voluptatem est cum saepe laborum quidem maxime excepturi! Aliquam similique molestiae cupiditate veritatis, architecto aperiam.</p>
+      </section>
+      <aside class="right-side">
+      <h1>사이드바</h1>
+      <img 
+      src="http://placeimg.com/200/200" alt="">
+      <p>부모</p>
+      </aside>
+      <footer>
+          <h1>footer</h1>
+      </footer>
+    </div>
+</body>
+</html>

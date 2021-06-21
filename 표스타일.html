@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>class.html</title>
+    <meta charset="UTF-8">
+    <style>
+        .table1 {
+            border: 1px solid black;
+            caption-side: top;
+            /* 표안에 테두리 합침(병합) */
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px dotted black;
+            padding: 10px;
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            /* 인라인 요소 수직 정렬 */
+            vertical-align: top;
+            vertical-align: bottom;
+            vertical-align: middle;
+        }
+        .table2 {
+            width: 400px;
+            border: 1px solid black;
+            /* 데이블 보더와 데이터 셀 분리(기본) */
+            border-collapse: separate;
+            /* 테이블 셀 여백 */
+            border-spacing: 10px;
+        }
+    </style>
+</head>
+<body>
+    <table class="table1">
+        <caption>프로축구 경기 일정</caption>
+        <tr>
+            <th>장소</th>
+            <th>경기</th>
+        </tr>
+        <tr>
+            <td>부산</td>
+            <td>울산 vs 인천</td>
+        </tr>
+        <tr>
+            <td>부산</td>
+            <td>부산 vs 대전</td>
+        </tr>
+    </table>
+    <table class="table2">
+        <caption>프로축구 경기 일정</caption>
+        <tr>
+            <th>장소</th>
+            <th>경기</th>
+        </tr>
+        <tr>
+            <td>부산</td>
+            <td>울산 vs 인천</td>
+        </tr>
+        <tr>
+            <td>부산</td>
+            <td>부산 vs 대전</td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>12-1.하위선택자.html</title>
+  <style>
+    /* section요소의 후손 h2를 선택 */
+    section h2 {
+      color: red;
+    }
+
+    section h2 span {
+      color: blue;
+    }
+
+    section ul {
+      color: green;
+    }
+
+    /* 후손 h3 선택 */
+    section h3 {
+      color: red;
+    }
+
+    /* 자식 h3 선택  */
+    section > h3 {
+      background-color: orange;
+    }
+    /* >기호는 자식요소만 선택가능하다 (후손요소는 제외) */
+    #container > ul {
+      border: 2px solid red;
+    }
+    /* +기호 인접한 형제 h2를 선택(엄격) */
+    h1 + h2 {
+        color: red
+    }
+
+    /* ~기호 일반 형제 */
+    h1 ~ h2 {
+        background-color: pink;
+    }
+    h1 ~ ul {
+        color: blue;
+        font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h2>하위/후손 선택자(Descendant Select)</h2>
+  <div>
+    <h2>food</h2>
+  </div>
+
+  <h2>자식 선택자(Child selector)</h2>
+  <section>
+    <h3>customer <span>name</span> - 자식 h3</h3>
+    <div>
+      <h3>후손 h3</h3>
+    </div>
+    <ul>
+      <li>kim <span>010-123-1234</span></li>
+      <li>lee <span>010-111-2222</span></li>
+      <li>han <span>010-222-3333</span></li>
+    </ul>
+  </section>
+
+  <!-- 424p -->
+  <h3>예약하기</h3>
+  <div id="container">
+    <ul>
+      <li>예약방법
+        <ul>
+          <li>직접통화</li>
+          <li>문자 남기기</li>
+        </ul>
+      </li>
+      <li>요금
+        <ul>
+          <li>1인: 40,000원</li>
+          <li>2인: 60,000원</li>
+        </ul>
+      </li>
+    </ul>
+  </div>  
+<!----형제 선택자(Sibling Seletor)--->
+  <h1>형제 선택자</h1>
+  <h2>heading 2</h2>
+  <h2>heading 2</h2>
+
+  <h1>예약 방법 및 요금</h1>
+  <ul>
+      <li>직접 통화</li>
+      <li>문자 남기기</li>
+  </ul>
+  <ul>
+    <li>1인 : 40,000원</li>
+    <li>2인 : 60,000원</li>
+    <li>3인 : 90,000원</li>
+    <li>4인 : 100,000원</li>
+  </ul>
+</body>
+</html>

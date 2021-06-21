@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>class.html</title>
+    <meta charset="UFT-8">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <h2>autofocus(자동초점)</h2>
+    <form action="">
+      <fieldset>
+          <legend>수강과목</legend>
+          <label for="">영어회화(초급)</label>
+          <input 
+          type="text" 
+          value="오전 9:00~11:00"
+          readonly>
+      </fieldset>
+      <fieldset>
+          <!---required 필수입력란---->
+          <legend>신청자(필수입력)</legend>
+          <p>
+              <label for="">이름</label>
+              <input 
+              type="text" 
+              autofocus
+              placeholder="이름 입력"
+              required>
+          </p>
+          <p>
+              <!---placeholder 설명글--->
+              <label for ="">학번</label>
+              <input 
+              type ="text" 
+              placeholder = "학번 입력"
+              required>
+          </p>
+          <p>
+              <label for="">학과</label>
+              <input 
+              type="text"
+              placeholder="학과 입력">
+          </p>
+          <input type="submit">
+      </fiedlset>
+      <hr>
+      <fieldset>
+          <legend></legend>
+          <h1>회원 가입을 환영합니다</h1>
+          <label for="">아이디 :
+          <input type="text" id="id" size="10" minlength="4" maxlength="10">
+          </label>
+      </fieldset>
+    </form>
+</body>
+</html>

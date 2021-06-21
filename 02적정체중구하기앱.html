@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>class.html</title>
+    <meta charset="UFT-8">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <h1>적정 체충 구하기</h1>
+    <script>
+        // 사용자 정보
+        var name = prompt("당신의 이름은?"); // 이름
+        var height = prompt("당신의 키는?") // 키
+        var weight = prompt("당신의 몸무게는?"); // 체중
+
+        // 처리(계산식): 적정체중 = (신장 - 100) x 0.9
+        var normal_w = (height - 100) * 0.9;
+
+        // 체중 초과 판단
+        var result = (weight >= normal_w - 5) && (weight <= normal_w + 5);
+        // console.log 개발자 도구 console창으로 값을 출력
+        console.log(result);
+
+        result = result ? "적정 체중입니다." : " 적정 체중이 아닙니다.";
+
+        // 결과 출력
+        document.write(name + '님은' + result);
+    </script>
+</body>
+</html>

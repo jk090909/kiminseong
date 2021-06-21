@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>class.html</title>
+    <meta charset="UFT-8">
+    <style>
+        /* :first-child 첫번째 자식 요소 선택 */
+        #list li:first-child {
+            color: red;
+        }
+         /* :last-child 마지막 자식 요소 선택 */
+         #list li:last-child {
+             color: blue;
+         }
+
+         /* :nth-child 특정 자식 위치 선택(숫자 1~) */
+         #list2 li:nth-child(2) {
+             background: #ccc;
+         }
+
+         /* :nth-child 수열을 활용하기 - 
+         nth-child(2n) 짝수 
+         nth-child(2n + 1) 홀수
+         */
+         #list2 li:nth-child(2n) {
+             background: #ccc;
+         }
+         #list2 li:nth-child(2n + 1) {
+             background: #ff0;
+         }
+         /* 첫번째 줄 강조 */
+         section > p:first-line {
+             font-weight: bold;
+         }
+         /* 첫번째 글자 강조 */
+         section > p:first-letter {
+             font-size: 2em;
+         }
+         /* 문단 앞 */
+         .deco:before {
+             content: "*";
+             color: yellowgreen;
+         }
+          /* 문단 뒤 */
+         .deco:after {
+             content: "★";
+             color: green;
+         }
+         div li {
+            margin: 15px; 
+         }
+         li.hot:after {
+             content:"NEW!!";
+             font-size:x-small;
+             padding: 2px 4px;
+             margin: 0 10px;
+             border-radius: 2px;
+             background:#f00;
+             color:#fff;
+         }
+    </style>
+</head>
+<body>
+    <ul id="list">
+        <li>first</li>
+        <li>second</li>
+        <li>third</li>
+        <li>fourth</li>
+    </ul>
+    <ul id="list2">
+        <li>first</li>
+        <li>second</li>
+        <li>third</li>
+        <li>fourth</li>
+        <li>fifth</li>
+        <li>sxith</li>
+    </ul>
+    <section>
+        <p>First line(첫번째 줄)...Lorem ipsum dolor 
+            sit amet consectetur adipisicing elit.
+            Voluptates pariatur esse culpa a officiis
+            reprehenderit aliquid necessitatibus at 
+            doloribus tenetur architecto, delectus 
+            illo quia cum adipisci officia ad nulla iusto?
+        </p>
+    </section>
+    <h2>:before and :after 가상 요소</h2>
+    <p class="deco">콘텐츠의 앞 또는 뒤에 가상의 콘텐츠를 추가함</p>
+<div>
+    <ul>
+        <li class="hot">제품 A</li>
+        <li>제품 B</li>
+        <li>제품 C</li>
+        <li class="hot">제품 D</li>
+    </ul>
+</div>
+</body>
+</html>

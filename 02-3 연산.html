@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>class.html</title>
+    <meta charset="UFT-8">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <h2>연산자(Operater)</h2>
+    <script>
+        var num1= 15;
+        var num2= 2;
+        // ES6 변수 최신 자바스크립 변수 var 와 동일한 변수//
+        let result;  //결과값 변수 
+
+        result = num1 + num2;
+        document.write(result, '<br>');
+
+        result = num1 - num2;
+        document.write(result, '<br>');
+
+        result = num1 * num2;
+        document.write(result, '<br>');
+
+        result = num1 / num2;
+        document.write(result,'<br>');
+        // % (나머지) 연산자
+        result = num1 % num2;
+        document.write(result,'<br>');
+
+        var t1 = '학교종이';
+        var t2 = ' 땡땡땡';
+        var t3 = ' 어서모이자';
+        result = t1 + t2 + t3;
+        document.write(result);    
+
+    </script>
+    <h2>대입 연산자</h2>
+    <script>
+        var number1 = 10;
+        var number2 = 3;
+
+        number1 = number1 + 1; //넘버1이 1증가
+        document.write(number1,'<br>');
+        number1 += 1; // 1증가
+        document.write(number1,'<br>');
+        number1 += number2;
+        document.write(number1,'<br>')
+
+        // -=
+        number1 = number1 - 1;
+        document.write(number1,'<br>');
+        number1 -= 1;
+        document.write(number1,'<br>');
+
+        // *=
+        number1 = number1 * 2;
+        document.write(number1,'<br>');
+        number1 *= 3;
+        document.write(number1,'<br>');
+
+        // /=
+        number1 = number1 / 2;
+        document.write(number1,'<br>');
+        number1 /= 2;
+        document.write(number1,'<br>');
+
+        // %=
+        number1 = number1 % 2;
+        document.write(number1,'<br>');
+        number1 %= 0.5;
+        document.write(number1,'<br>');
+    </script>
+
+    <h2>대입연산자로 HTML 코드 출력하기</h2>
+    <script>
+        var html = "<table border='1'>";
+            html += "<tr>";
+            html += "<td>1</td><td>2</td><td>3</td>";
+            html += "</tr>";
+            html += "</table border>";
+        document.write(html);
+    </script>
+
+    <h2>증감 연산자(++,--)</h2>
+    <script>
+        // ++ 1씩 증가
+        var n = 0;
+        n++;         //1 증가 - 후대입 연산자 : 다음에 증가
+        document.write(n,'<br>')
+        ++n;         //1 증가 - 선대입 연산자 : 바로 증가
+        document.write(n,'<br>')
+    </script>
+
+    <h2>비교 연산자</h2>
+    <script>
+        var a = 10, b = 20, c = 10, f = "20";
+       
+        // a는 b보다 크다
+        result = a > b;  //false
+        document.write(result,'<br>');
+
+        // a는 b보다 작다
+        result = a < b;  //true
+        document.write(result,'<br>');
+
+        // a는 b보다 작거나 같다(<=)
+        result = a <= b; //true
+        document.write(result,'<br>');
+
+        // a와 b는 같다(==): 동등연산자
+        result = a == b; //false
+        document.write(result,'<br>')
+
+        // a와 b는 같지 않다(!=)
+        result = a != b;
+        document.write(result,'<br>');
+
+        // 느슨한 비교 원래는 다름
+        result = b == f; //true
+        document.write(result,'<br>')
+
+        // 엄격한 비교(===) : 일치연산자(타입체크)
+        result = b === f; //false
+        document.write(result,'<br>')
+    </script>
+</body>
+</html>

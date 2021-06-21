@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>class.html</title>
+    <meta charset="UFT-8">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <script>
+    // TV 객체변수 생성
+        var tv = {
+            // 다양한 변수를 담음
+        };
+
+        // tv 객체변수안에 color 속성값을 추가
+        tv.color = "white";
+        console.log(tv)
+        
+        tv.price = 300000;
+        console.log(tv)
+
+        document.write(tv.color,'<br>');
+        document.write(tv.price,'<br>');
+
+        //dog
+        var dog = {};
+        dog.race = '푸들';
+        dog.age = 5;
+        dog.weight = 8;
+
+        document.write('개의 품종은 ' + dog.race + '이고' + ' 나이는 ' + 
+        dog.age + '세에 ' + '몸무게는 ' + dog.weight + 'kg 입니다.');
+
+    </script>
+<h2>현재 시간 조회</h2>
+    <script>
+        // Date객체
+        var d = new Date(); // 새로운 시간값(객체)을 생성
+        document.write('<br>',d);
+
+        // 년도 
+        var year = d.getFullYear();
+        document.write('<br>year: ', year);
+
+        // 월(month)
+        var month = d.getMonth();
+        document.write('<br>month: ',month + 1);
+
+        // 일(date): 1 ~ 31
+        var date = d.getDate();
+        document.write('<br>date: ',date);
+
+        // 요일(day): 0 ~ 6(일요일 ~ 토요일)
+        var day = d.getDay();
+        document.write('<br>day: ',day)
+    </script>
+    <h2>특정 시간을 조회</h2>
+    <script>
+        var worldcup = new Date(2002, 4, 31);
+        var theMonth = worldcup.getMonth() 
+        var theDate = worldcup.getDate();
+        var theDay = worldcup.getDay();
+        // 요일을 문자로 변환
+        switch(theDay) {
+            case 0: theDay = "일요일";
+                break;
+                case 1: theDay = "월요일";
+                    break;
+                    case 2: theDay = "화요일";
+                        break;
+                        case 3: theDay = "수요일";
+                            break;
+                            case 4: theDay = "목요일";
+                                break;
+                                case 5: theDay = "금요일";
+                                    break;
+                                    case 6: theDay = "토요일";
+                                        break;
+         document.write("Today is", Day);
+        }
+
+        document.write('2002 월드컵은 ' + theMonth + '월 ' + theDate + '일 '+
+         theDay + '에 대한민국에서 열렸습니다.');
+    </script>
+
+    <h2>밀리세컨드 = 1/1000초</h2>
+    <script>
+        /*
+        var today = new Date();
+        var ms = today.getMilliseconds();
+
+        document.write('<br>ms: ', ms);
+        
+        var time = today.getTime();
+        document.write('time = ', time / (1000 * 60 * 60 * 24));
+        */
+
+        // 올해 연말까지 며칠?
+        var today = new Date(); // 현재 날짜
+        var nowYear = today.getFullYear(); // 올해 년도
+        var theDate = new Date(nowYear, 11, 31); // 올해 년말
+        // 남은 일수 = 연말 - 오늘 
+        var diffDate = theDate.getTime() - today.getTime();
+
+        console.log(diffDate)
+
+        var result = Math.ceil(diffDate / (1000 * 60 * 60 * 24));
+        document.write('연말 D-Day: ', result + '일 남았습니다.');
+    </script>
+</body>
+</html>

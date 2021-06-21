@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>class.html</title>
+    <meta charset="UFT-8">
+    <style>
+        
+    </style>
+    <script src="jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <h1>선호하는 음식</h1>
+    <section id="food_1">
+        <h2>한식</h2>
+        <ul>
+            <li class="blue">김치</li>
+            <li>불고기</li>
+        </ul>
+        <ul id="location">
+            <li>서울</li>
+            <li>인천</li>
+            <li>부산</li>
+        </ul>
+    </section>
+    <script>
+        $(function(){
+            // $(선택자),메서드()
+            // 태그 선택자
+          $('h1').css('color', 'red');
+        });
+          $('h2')
+          .css('color', 'orange')
+          .css('background-color', 'pink');
+        // id 또는 class 선택자
+        $('#location').css('color', 'green');
+        $('.blue').css('color', 'blue');
+
+        // 전체 선택자(*)
+        $('*').css('font-style', 'italic');
+    </script>
+</body>
+</html>

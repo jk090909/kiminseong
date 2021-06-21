@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>class.html</title>
+    <meta charset="UFT-8">
+    <style>
+         h1 {color: rgb(0,200,0);}
+         h2 {color: blue;}
+         .x {color: #ff0000;
+             text-decoration: underline;}
+         .underline {
+             text-decoration: underline;
+         }
+         .overline {
+             text-decoration: overline;
+             text-decoration: none;
+         }
+         .line-t {
+             text-decoration: line-through;
+         }
+         .none {
+             text-decoration: none;
+         }
+         .upper {
+             text-transform: uppercase;
+         }
+         h1 {color: black;}
+         .trans1 {
+             text-transform: uppercase;
+         }
+         .trans2 {
+             text-transform: capitalize;
+         }
+         .shadow1 {
+             text-shadow: 2px 2px #f00;
+         }
+         .shadow2 {
+             background-color: #999;
+             color: white;
+             font-size: 50px;
+             font-weight: bold;
+             /* x_pos | y_pos | blur | color*/
+             text-shadow: 2px 2px 4px #000;
+         }
+         .shadow3 {
+             font-size: 30px;
+             color: white;
+             font-weight: bold;
+             text-shadow: 4px 4px 4px #f00,
+                          4px -4px 4px blue,
+                          -4px -4px 8px green;
+         }
+         .shadow4 {
+             font-size: 60px;
+             font-weight: bold;
+             background-color: #000;
+             color: #000;
+             text-shadow: 0 0 4px #ccc,
+                          0 -5px 4px #ff3,
+                          2px -10px 6px #fd3,
+                          -2px -15px 11px #f80,
+                          2px -19px 18px #f20;
+         }
+         .letter {
+             letter-spacing: 0.5px;
+             letter-spacing: 1em;
+             letter-spacing: 0.5em;
+         }
+         .word {
+             word-spacing: 0px;
+             word-spacing: 1em;
+         }
+    </style>
+</head>
+<body>
+    <p><span class="x">텍스트 스타일</span>은 
+        글자와 단어들,그리고 글자들로 이루어진
+        문단에서 사용되는 스타일입니다.</p>
+
+    <hr>
+
+    <h2>letter-spaceing 자간</h2>
+    <p class="letter">HELLO LETTER</p>
+    <p class="word">word spacing word spacing</p>
+    <!---------------232p 예제------------------->
+    <h1 class="shadow4">HTML5</h1>
+    <h1 class="shadow1">text-shadow 텍스트 그림자 효과</h1>
+    <p class="shadow2">text-blur 효과</p>
+    <p class="shadow3">그림자 중첩 shadow layering</p>
+    
+    
+    <h1>Have to study</h1>
+    <ul>
+        <li class="trans1">html</li>
+        <li class="trans1">css</li>
+        <li class="trans2">javascript</li>
+    </ul>
+    
+    <hr>
+
+    <h2>text-transform - 영 대소문자 변환</h2>
+    <p class="upper">hello world(소 -> 대)</p>
+    <h2>text-decoration - 줄장식</h2>
+    <p class="underline"><none>underline(밑줄)</none></p>
+    <p class="overline">overline(윗줄)</p>
+    <p class="line-t">line-through(취소선)</p>
+    <a class="none" href="#">anchor</a>
+    <del>del</del>
+    <hr>
+    <h1>세계 10대 슈퍼푸드</h1>
+    <h2>마늘(Garlic)</h2>
+
+    <p> 일해백리는 마늘의 별명이다.한가지
+        해가 있고 백가지 이로움이 있다는 뜻이다.<br>
+        그 한 가지 해란, 아린 맛으로 인해 위해
+        위에 부담을 준다는 것이다.
+    
+        마늘 특유의<br>아린 맛은<span class="x">알리신</span>이라는 성분 때문으로,
+        살균 및 항균 작용을 하며<br>마늘에 들어 있는 아연이
+        피로 회복에 도움을 준다.</p>
+</body>
+</html>

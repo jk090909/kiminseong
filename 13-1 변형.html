@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>class.html</title>
+    <meta charset="UTF-8">
+    <style>
+        * {margin: 50px;}
+        section {
+            width: 150px;
+            height: 150px;
+            border: 5px solid #ccc;
+        }
+        .trans {
+            width: 150px;
+            height: 150px;
+            background: orange;
+        }
+        section:hover > .trans {
+            transform: translate(150px, 150px);
+        }
+        .scale {
+            width: 150px;
+            height: 150px;
+            background: lightgreen;
+            transition: 2s;
+        }
+        section:hover > .scale {
+            transform:scale(0.5, 0.5);
+            transition:1s;
+        }
+        .rotate {
+            width: 150px;
+            height: 150px;
+            background: url(http://placeimg.com/150/150/animals/1);
+        }
+        section:hover > .rotate {
+            transform: rotate(30deg);
+        }
+        .skew {
+            width: 150px;
+            height: 150px;
+            transform: skewX(30deg);
+            background: orange;
+        }
+    </style>
+</head>
+<body>
+   <h1>변형(transform)</h1>
+   <section>
+   <div class="trans">translate(이동)</div>
+</section>
+<section>
+    <div class="scale">scale (확대/축소)</div>
+</section>
+<section>
+    <div class="rotate">rotate(회전)</div>
+</section>
+<section>
+    <div class="skew">skew(비틀기)</div>
+</section>
+</body>
+</html>

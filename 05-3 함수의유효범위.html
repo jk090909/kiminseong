@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>class.html</title>
+    <meta charset="UFT-8">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <h2>함수의 유효 범위(scope)</h2>
+    <script>
+        // 전역 변수 (전체 영역에 유요한 변수)
+        var global_a = 1;
+
+        function myFunc() {
+        // 지역 변수 (함수 안에서만 유효)
+        var local_a = 3;
+        document.write('<br>local_a = ', local_a);
+        document.write('<br>global_a = ', global_a);
+        global_a += 1; // 전역 변수 1증가
+        }
+        myFunc() ;
+
+        // 전역 변수
+        var result = 999;
+
+        function addNum(a, b) {
+            // 지역 변수
+            // var result = a + b;
+            var result = a + b;
+            document.write('<br>a+b 는', result);
+        }
+            addNum(4, 5);
+        
+    </script>
+    <h2>객체 생성자 함수 (Constructor)</h2>
+    <script>
+        var car1 = {
+          name: 'sonata',
+          color: 'red',
+          price: 10000000
+        }
+        var car2 = {
+          name: 'sonata',
+          color: 'blue',
+          price: 10000000
+        }
+    
+        // 자동차 객체 생성 함수(== 클래스, 구조체)
+        function Car(name, color, price) {
+          // 속성
+          this.name = name;
+          this.color = color;
+          this.price = price;
+          // 메서드
+          this.showInfo = function() {
+            document.write('<hr>car info = ', this.name);
+          }
+        }
+    
+        // 객체 생성(new)
+        var car1 = new Car("sonata", 'white', 20000000);
+        console.log(car1);    
+        var car2 = new Car("matiz", 'red', 15000000);
+        car1.showInfo();
+        car2.showInfo();
+    
+    
+        /** 정상 몸무게 채크 생성자 함수 */
+        function CheckWeight(name, height, weight) {
+          // 속성
+          this.userName = name;
+          this.userHeight = height;
+          this.userWeight = weight;
+          this.minWeight;
+          this.maxWeight;
+    
+          // 메서드(함수)
+          this.getInfo = function() {
+            var str = "";
+            str += "이름: " + this.userName + ', ';
+            str += "키: " + this.userHeight + ', ';
+            str += "몸무게: " + this.userWeight + '<br>';
+          }
+          this.getResult = function() {
+            console.log('결과');
+            
+          }
+        }
+    
+        // 객체 생성
+        var kim = new CheckWeight('김길동', 175, 70);
+        console.log(kim);
+        kim.getResult();
+    
+    
+      </script>
+</body>
+</html>

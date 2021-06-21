@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>class.html</title>
+    <meta charset="UFT-8">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <h2>select 요소</h2>
+    <label for ="class">학과</label>
+    <select name="class" id="class">
+        <option value="archi">건축공학과</option>
+        <option value="machanic">기계공학과</option>
+        <option value="elec">산업공학과</option>
+        <option value="com" seleced>컴퓨터공학과</option>
+    </select>
+
+    <h2>김밥천국 메뉴선택</h2>
+
+    <select name="food id="food>
+        <optgroup label="한식"> <!--옵션 그룹화--->
+            <option value="">순두부</option>
+            <option value="">불고기 백반</option>
+            <option value="">김치찌개</option>
+        </optgroup>
+    
+        <optgroup label="중식">
+            <option value="">짜장면</option>
+            <option value="">짬뽕</option>
+            <option value="">탕수육</option>
+        </optgroup>
+
+        <optgroup label="양식">
+            <option value="">스파게티</option>
+            <option value="">스테이크</option>
+            <option value="">피자</option>
+        </optgroup>
+     
+    </select>
+    <h2>textarea 긴 글상자</h2>
+    <label for ="memo">메모 입력</label><br>
+    <textarea
+        name="memo"
+        id="memo"
+        cols="30"
+        rows="10"
+        placeholder="여기에 텍스트 입력">
+    </textarea>
+
+    <h2>progress 진행 상태(진척도)</h2>
+    <progress min="0" max="100" value="30"></progress>30%
+
+    <h2>meter 점유율(크기)</h2>
+    <meter min="0" max="100" value="50"></meter>50%
+
+    <!--- 한계값 low, high --->
+    <p>
+      <meter 
+        min="1024" 
+        max="10240"
+        value="2047"
+        low="2048"
+        high="8192">
+      </meter>
+    </p>
+</body>
+</html>

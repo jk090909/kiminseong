@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>class.html</title>
+    <meta charset="UFT-8">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <script>
+
+        
+    // 구구단 5단 
+        var i = 1;
+        while(i <= 9) {
+            document.write("5x"+i+"="+i*5,"<br>");
+            i++;
+        }
+
+
+    //반복문으로 별 10개 그리기
+    for(var a = 1; a <= 10; a++) {
+    for(var i = 1; i <= 10; i++) {
+       document.write('★');
+     }
+      document.write('<br>');
+     }
+
+
+    // 3행 2열
+    for(var i = 1; i <= 3; i++) {
+        for(var a = 1; a <= 2; a++) {
+            document.write("<br>", i + "행" + a + "열","<br>");
+        }
+        document.write("<br>");
+    }
+
+
+    // 5행 5열 
+        var num = 1;
+        var t = "<table border = 1>";
+            for(var i =1; i <= 5; i++) {
+                t+="<tr>";
+                    for(var k=1; k<=5; k++) {
+                      t+="<th>" + num + "</th>";
+                        num++;
+                    }
+                    t+="</tr>";
+            }
+            t+="</table>";
+            document.write(t);
+    </script>
+</body>
+</html>

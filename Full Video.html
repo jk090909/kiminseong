@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>class.html</title>
+    <meta charset="UTF-8">
+    <meta name="Viewport" content="width=deviec-width,
+    initial-scale=1.0">
+    <style>
+        #bg {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: auto;
+            height: auto;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -100;
+        }
+
+        #content {
+            color: #fff;
+            position: absolute;
+            background: rgb(0,0,0,0.3);
+            top: calc(50% - 102px);
+            padding: 20px;
+            bottom: 0px;
+            right: 0px;
+            width: 50%;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+   <video src="./video.mp4"
+          autoplay
+          muted
+          pause
+          loop
+          id="bg">
+   </video>
+
+   <div id="content">
+       <h1>Music is My Life...</h1>
+       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci, maiores! Asperiores odio sequi molestiae id veritatis ipsam debitis soluta voluptatibus aliquid beatae fugit esse, reprehenderit porro commodi possimus, totam repellendus?</p>
+    <button id="btn">Pause</button>
+    </div>
+
+    <script>
+        var video = document.getElementById('bg');
+        var btn = document.getElementById('btn');
+
+        function setVideo(){
+            video.pause();
+        }
+        console.log(pause);
+    </script>
+</body>
+</html>

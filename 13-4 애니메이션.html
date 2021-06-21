@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>class.html</title>
+    <meta charset="UTF-8">
+    <style>
+        .box {
+            position: absolute;
+            left: 0; top: 0;
+            width: 100px;
+            height: 100px;
+            background: orange;
+            animation-name: mybox;
+            animation-duration: 3s;
+            /* 반복 : 숫자, infinite(무한반복) */
+            animation-iteration-count: infinite;
+
+            /* 교차 반복 */
+            animation-direction: alternate;
+
+            /* 가속도 지정 */
+            animation-timing-function:ease-in-out;
+
+            /* 축약식 */
+            animation: mybox 3s ease-in-out infinite alternate;
+        }
+
+        /* 키프레임 */
+        @keyframes mybox {
+            from{
+                background-color: orange;
+                border-radius: 0;
+                left: 0; top: 0;
+            }
+            50% {
+                background-color: lightskyblue;
+                border-radius: 50%;
+                left: 700px; top: 0px;
+            }
+            80% { 
+                background-color:red;
+                border-radius: 0%;
+                left: 700px; top: 800px;
+            }
+            to {
+                background-color: yellow;
+                border-radius: 50%;
+                left: 0; top: 400px;
+            }
+        }
+
+        .box2 {
+            width: 100px;
+            height: 100px;
+            background: #ccc;
+            position: absolute;
+            left:50%; top: 50%;
+            animation-name: rotate, bg;
+            animation-duration: 3s, 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-direction: alternate;
+        }
+
+        @keyframes rotate {
+            from {transform: rotate(0deg) scale(0,0);}
+            to { transform: rotate(360deg) scale(2,2);}
+        }
+        @keyframes bg {
+            from {background: red;}
+            to {background: blue;}
+        }
+    </style>
+</head>
+<body>
+    <div class="box">animation</div>
+    <div class="box2">box2</div>
+</body>
+</html>

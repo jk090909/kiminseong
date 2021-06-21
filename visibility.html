@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>class.html</title>
+    <meta charset="UFT-8">
+    <style>
+        .none {
+            display: none;
+        }
+        .hidden {
+            visibility: hidden;
+        }
+        .canvas {
+            position: relative;
+            width: 600px;
+            height: 400px;
+            background: skyblue;
+        }
+        .green {
+            width: 600px;
+            height: 100px;
+            background: green;
+            position: absolute;
+            bottom: 0
+        }
+        .tree {
+            width: 200px;
+            height: 300px;
+            background: url(./images/tree.png);
+            background-size: 100% 100%;
+            position: absolute;
+            z-index: 99;
+        }
+        .tree.one {
+            left: 50px; top: 50px;
+            z-index: 9;
+        }
+        .tree.two {
+            left: 350px; top: 50px;
+        }
+        .sun {
+            width: 100px;
+            height: 100px;
+            background: yellow;
+            border-radius: 50%;
+            position: absolute;
+            right: 20px;top: 10px;
+            /*
+            z축 레이어의 위치를 조정
+            숫자가 높을수록 상위 레이어로 올라감
+            z - index
+            */
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <img src="http://placehold.it/200x200?text=1" alt="1">
+        <img class="hidden" src="http://placehold.it/200x200?text=2" alt="2">
+        <img src="http://placehold.it/200x200?text=3" alt="3">
+    </div>
+    <div class="canvas">
+        <div class="green">green</div>
+       <div class="tree one">tree</div>
+       <div class="tree two">tree2</div>
+       <div class="sun">sun</div>
+    </div>
+</body>
+</html>

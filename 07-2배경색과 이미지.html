@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>class.html</title>
+    <meta charset="UFT-8">
+    <style>
+        h2 {
+            background: pink;
+            text-align: center;
+        }
+        body {
+            background: #85b5d8;
+            color: green;
+            background-image: url(./images/watercolor.png);
+        }
+        div {
+            background-color: white;
+            width: 45%;
+            padding: 10px;
+            border: 5px dotted black;
+            line-height: 20px;
+            text-align: center;
+        }
+        .clip, .clip2{
+            width: 50%;
+            height: 100px;
+            background: yellow;
+            background-clip: border-box;
+        }
+        .clip2 {
+            background-clip: padding-box;
+        }
+        .clip3 {
+            background-clip: content-box;
+        }
+        .bg {
+            background-image: url();
+        }
+    </style>
+</head>
+<body>
+    <h2>background-image</h2>
+    <div class="bg">
+         background-image
+    </div>
+    <hr>
+    <h2>background-clip 배경 적용 범위</h2>
+    <div class="clip">background-clip:
+        border-box(전체가 채워짐 - 기본)
+    </div>
+    <div class="clip2">background-clip:
+        padding-box(테두리를 뺀 영역까지 채워짐)
+    </div>
+    <div class="clip3">background-clip:
+        content-box(텍스트 영역까지만 채워짐)
+    </div>
+
+    <hr>
+
+    <h2>background-color</h2>
+    <p>문단 배경</p>
+    <div>
+        <h2>배경색</h2>
+        <p>배경색은 상속이 되지 않습니다.</p>
+        <p>Lorem ipsum dolor sit amet consectetur 
+        adipisicing elit. Ratione dignissimos 
+        fugit fugiat neque corrupti, molestias vero 
+        consequatur officiis asperiores cumque expedita, 
+        iste nemo eius, magni laboriosam ducimus dolorem. 
+        Sapiente, culpa.</p>
+    </div>
+</body>
+</html>

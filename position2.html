@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>class.html</title>
+    <meta charset="UFT-8">
+    <style>
+    * {margin: 0;}
+      .box {
+          width: 150px; height: 150px;
+          /*
+           static: 문서 배치 모드 (좌표개념 없음)
+           absolute: 절대좌표계(x, y)
+           relative: 상대좌표계(x. y)
+          */
+           position: static;
+      }
+      .red {
+          background: rgb(223, 98, 98);
+      }
+      .green {
+          background: rgb(42, 177, 42);
+          /*
+           relative
+              원래 자신의 위치를 기억
+              원래 자기 위치에서 이동
+              주변 요소에 영향을 주지 않음 
+          */
+          position: relative;
+          left: 150px;
+          top: 150px;
+      }
+      .blue {
+          background: rgb(79, 79, 206);
+      }
+    </style>
+</head>
+<body>
+    <div class="box red">box 1</div>
+    <div class="box green">box 2</div>
+    <div class="box blue">box 3</div>
+</body>
+</html>

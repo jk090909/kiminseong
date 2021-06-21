@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>class.html</title>
+    <meta charset="UFT-8">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <script>
+        var result;
+        var x = 10, y = 20;
+        // or 논리연산자
+        result = x > y || x > 12; // false or false
+        document.write('<br>false || false = ', result);
+
+        //한쪽만 true면 ture
+        result = x < y || y == x; // true or false
+        document.write('<br>true || false = ', result);
+
+        // and 연산자(&&) 둘다 참이여야 참 
+        result = x < 20 && y < 10; // true and false
+        document.write('<br>true && false = ', result);
+        result = x < 20 && y == 20; // true and true
+        document.write('<br>true && true = ', result);
+
+        // !(부정) 연산자 - 결과를 반대로
+        result = !(x < 20);
+        // !true => flase 참을 부정했기때문에 false가 됨
+        document.write('<br>!(x < 20) ',result);
+
+    </script>
+
+    <h2>삼항 조건 연산자</h2>
+    <script>
+        var money = 100000000;
+        // 문자와 변수를 같이 출력하기
+        document.write('현재 잔액은' + money);
+
+        // 조건식 ? 참일 때 : 거짓일 때
+        var result = money >= 10000 ? "잔고 인출 가능" : "잔액이 부족";
+        document.write('<br>',result);
+    </script>
+
+    <script>
+        var a = 10;
+        var b = 13;
+
+        var result = a > b ? "javascript" : "hello";
+        document.write('<br>',result);
+    </script>
+</body>
+</html>

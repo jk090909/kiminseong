@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>class.html</title>
+    <meta charset="UFT-8">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <script>
+        // 3초마다 문단 실행
+        var int = setInterval(function(){
+            document.write('<p>3초마다 실행됩니다.</p>');
+        }, 3000);
+
+        // 인터벌 중단 : clearInterval(인터벌변수명)
+        function stpoInt() {
+            clearInterval(int);
+            document.write('중단됨');
+        }
+    </script>
+
+    <button onclick="stopInt();">인터벌 중단</button>
+</body>
+</html>

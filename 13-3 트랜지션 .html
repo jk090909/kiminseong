@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>class.html</title>
+    <meta charset="UTF-8">
+    <style>
+       .box1 {
+        width: 100px;
+        height: 100px;
+        background: lightgreen;
+        transition-duration: 2s;
+       }
+       .box1:hover {
+        width: 200px;
+        height: 100px;
+        background: orange;
+       }
+       .box1:active {
+           width: 300px;
+           height: 300px;
+           margin-left: 300px;
+       }
+       .trans > li {
+           list-style-type: none;
+           width: 100px;
+           height: 50px;
+           background: orange;
+           margin: 5px;
+           transition-duration: 3s;
+       }
+       .trans:hover > li {
+          width: 700px;
+       }
+       .trans > li:first-child {
+           transition-delay: 1s;
+       }
+       .trans > .linear {
+           transition-timing-function: linear;
+           background-color: #abc;
+       }
+       .trans > .ease-in {
+           transition-timing-function: ease-in;
+           background-color: #cab;
+       }
+       .trans > .ease-in-out {
+           transition-timing-function: ease-in-out;
+           background-color: #bac;
+       }
+       .trans .cubic {
+           transition-timing-function: cubic-bazier(.43,1.14,.84,.41);
+           background: gold;
+       };
+    </style>
+</head>
+<body>
+    <div class="box1">box1</div>
+        <h2>transition-delay</h2>
+            <ul class="trans">
+                <li>first -1s delay</li>
+                <li>second - no delay</li>
+                <li class="linear">linear(정속)</li>
+                <li class="ease">ease</li>
+                <li class="ease-in-out">ease-in-out</li>
+                <li class="cubic">cubic-bezier</li>
+            </ul>
+   
+</body>
+</html>

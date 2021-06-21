@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>class.html</title>
+    <meta charset="UFT-8">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <h2>Math 객체</h2>
+
+    <script>
+        var pi = Math.PI; // 원주율 값(상수);
+        document.write('<br>PI= ', pi);
+
+        /** 수학 매서드 **/
+        // abs() 절대값
+        var a = -3;
+        document.write('<br>abs(a) = ', Math.abs(a));
+
+        // Min과 max: 최소값, 최대값
+        var min = Math.min(5, 10); // 최소값 구하기
+        document.write('<br>Min = ', min);
+
+        // Math객체를 이용하여 3과 9중 최대값을 구해보시오.
+        var max = Math.max(3, 5, 11, 9);
+        document.write('<br>max = ', max);
+
+        // round 소수점 반올림
+        var num = 2.1234;
+        var roundNum = Math.round(num);
+        document.write('<br>round = ', roundNum);
+        
+        // ceil 올림
+        var ceilNum = Math.ceil(num);
+        document.write('<br>ceil = ', ceilNum);
+        
+        // floor 내림
+        var floorNum = Math.floor(num);
+        document.write('<br>floor = ', floorNum);
+
+        // random: 난수 1 부터 10까지 난수 * 10
+        // 난수 범위 : Math.random()*최대값 + 최소값
+        var r = Math.floor(Math.random() * 10 + 1); // 1 ~ 10
+        document.write('<br>random = ', r);
+        </script>
+
+        <h1>가위 바위 보 맞추기</h1>
+        <script>
+            var game = prompt('가위, 바위, 보 중 선택', '가위');
+            var gameNum;
+
+            // 입력값 판단
+            switch(game) {
+                case '가위' : gameNum = 1; break;
+                case '바위' : gameNum = 2; break;
+                case '보' : gameNum = 3; break;
+                default: alert('잘못 입력했습니다.');
+                location.reload();
+            }
+
+            // 컴퓨터 난수(가위바위보) 발생
+            var com = Math.ceil(Math.random() * 3);
+            console.log(com);
+            document.write("<img width='300'src='" + com + ".jpg'/>");
+
+            // 맞는지 비교 (내가 입력한 값 == com 값)
+            if(gameNum == com) {
+             document.write('<h2>맞췄습니다.</h2>');
+            } else {
+                document.write('<p style="color:red;">틀렸습니다.</p>');
+            }
+        </script>
+</body>
+</html>
